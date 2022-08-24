@@ -1,0 +1,8 @@
+(lambda x:Nat. lambda x:Nat. lambda x:Nat. x)
+
+L x. L y. x y x
+(L x. L y. x y x) u
+
+ L x:Bool. L y:Bool. L z:Bool. true
+
+letrec sum : Nat -> Nat -> Nat = lambda n : Nat. (lambda m: Nat. if (iszero n) then m else succ (sum (pred n) m)) in sum 21 34
